@@ -28,7 +28,9 @@ export default function StepTwo() {
                 console.log('prev selected true', prevSelected);
                 prevSelected.classList.remove('plan-selected')
             }
+            console.log('ready to be selected', ref.current);
             ref.current.classList.add('plan-selected')
+            console.log('class added', ref.current);
             setSelectedPlan(ref.current)
         })
     }
