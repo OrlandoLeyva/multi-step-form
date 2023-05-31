@@ -24,6 +24,7 @@ export default function StepTwo() {
     function select(ref){
         setSelectedPlan(prevSelected =>{
             if (selectedPlan) {
+                console.log('prev selected true', prevSelected);
                 prevSelected.classList.remove('plan-selected')
             }
             ref.current.classList.add('plan-selected')
