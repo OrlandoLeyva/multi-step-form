@@ -8,7 +8,7 @@ export default function PlanCard(props){
     const price = billingSelected == 'yearly' ? planData.YearlyPrice : planData.monthlyPrice
 
     const selectedStyles = {
-        border: '1px solid hsl(213, 96%, 18%)',
+        border: '2px solid hsl(213, 96%, 18%)',
     }
 
     function selectPlan(){

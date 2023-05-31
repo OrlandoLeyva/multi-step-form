@@ -225,6 +225,7 @@ textarea {
 }
 
 .billing-switcher {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -236,7 +237,6 @@ textarea {
   border-radius: 20px;
   width: 40px;
   height: 20px;
-  /* padding: 5px 1rem; */
 }
 
 .switcher-indicator.yearly-selected {justify-content: end;}
@@ -251,6 +251,7 @@ textarea {
 }
 
 .select-billing-button {
+  background-color: transparent;
   border: none;
   color: var(--Cool-gray);
 }
