@@ -24,24 +24,26 @@ export default function StepTwo() {
     }, [])
     
     function select(ref){
-        console.log('selecting new plan', ref.current);
-        setSelectedPlan(prevSelected =>{
-            if (selectedPlan) {
-                console.log('prev selected true', prevSelected);
-                prevSelected.classList.remove('plan-selected')
-            }
-            console.log('ready to be selected', ref.current);
-            ref.current.classList.add('plan-selected')
-            console.log('class added', ref.current);
-            defaultRef = ref.current
-            console.log('default ref', defaultRef);
-            setSelectedPlan(ref.current)
-        })
+        // console.log('selecting new plan', ref.current);
+        // setSelectedPlan(prevSelected =>{
+        //     if (selectedPlan) {
+        //         console.log('prev selected true', prevSelected);
+        //         prevSelected.classList.remove('plan-selected')
+        //     }
+        //     // console.log('ready to be selected', ref.current);
+        //     ref.current.classList.add('plan-selected')
+        //     // console.log('class added', ref.current);
+        //     defaultRef = ref.current
+        //     // console.log('default ref', defaultRef);
+        //     setSelectedPlan(ref.current)
+        // })
+
+        setSelectedPlan(ref.current)
     }
 
     // remove
     useEffect(()=>{
-        console.log('default plan', defaultRef);
+        // console.log('default plan', defaultRef);
     }, [selectedPlan])
 
     return (
