@@ -278,7 +278,9 @@ textarea {
 }
 
 .add-on-card.checked {
-  border: 1px solid var(--Marine-blue);
+  border: 2px solid var(--Marine-blue);
+  border-radius: 8px;
+  padding: .5rem;
 }
 
 .add-on-card-price {
