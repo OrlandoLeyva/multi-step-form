@@ -272,6 +272,7 @@ textarea {
 
 .add-on-card {
   display: flex;
+  justify-content: flex-start;
   gap: 1rem;
   align-items: center;
 }
@@ -280,6 +281,17 @@ textarea {
   border: 1px solid var(--Marine-blue);
 }
 
+.add-on-card-price {
+  color: var(--Purplish-blue);
+  font-weight: var(--fw-regular);
+  margin-left: auto;
+}
+
+.add-on-card-info h3 {
+  font-size: 1.125rem;
+  font-weight: var(--fw-bold);
+  color: var(--Marine-blue);
+}
 
 /* PAGE FOUR */
 
