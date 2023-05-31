@@ -252,6 +252,7 @@ textarea {
 
 .select-billing-button {
   background-color: transparent;
+  font-weight: var(--fw-bold);
   border: none;
   color: var(--Cool-gray);
 }
