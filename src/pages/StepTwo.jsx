@@ -22,6 +22,7 @@ export default function StepTwo() {
     }, [])
     
     function select(ref){
+        console.log('selecting new plan', ref.current);
         setSelectedPlan(prevSelected =>{
             if (selectedPlan) {
                 console.log('prev selected true', prevSelected);
@@ -31,6 +32,11 @@ export default function StepTwo() {
             setSelectedPlan(ref.current)
         })
     }
+
+    // remove
+    useEffect(()=>{
+        console.log('selected plan', selectedPlan);
+    })
 
     return (
         <div className="step-page">
