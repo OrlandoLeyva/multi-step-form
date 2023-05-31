@@ -65,7 +65,7 @@ export default function StepTwo() {
                     {selectedAddOnsEl}
                 </div>
 
-                <div className="bill-card-item selected-plan">
+                <div className="bill-card-item total-card">
                     <p>Total (per {totalMessage})</p>
                     <p className="price">${total}/{billingIndicator}</p>
                 </div>

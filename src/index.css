@@ -313,3 +313,33 @@ textarea {
   display: flex;
   justify-content: space-between;
 }
+
+.bill-card-item.selected-plan {
+  align-items: center;
+}
+
+.bill-card-item.selected-plan h3, .bill-card-item.selected-plan .price{
+  color: var(--Marine-blue);
+  font-weight: var(--fw-bold);
+  font-size: 1.125rem;
+}
+
+.bill-card-item.selected-addOns .price {
+  color: var(--Marine-blue);
+  font-weight: var(--fw-regular);
+}
+
+.bill-card-item.selected-addOns > * {
+  padding: 2px;
+  font-size: 1.125rem;
+}
+
+.total-card {
+  font-size: 1.125rem;
+}
+
+.total-card .price {
+  color: var(--Purplish-blue);
+  font-weight: var(--fw-bold);
+  font-size: 1.3rem;
+}
