@@ -343,3 +343,10 @@ textarea {
   font-weight: var(--fw-bold);
   font-size: 1.3rem;
 }
+
+.change-plan-button {
+  border: none;
+  text-decoration: underline;
+  font: inherit;
+  color: inherit;
+}

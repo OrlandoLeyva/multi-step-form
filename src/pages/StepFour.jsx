@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import { stepContextObj } from "../Context/StepContext"
 import StepHeader from "../components/StepHeader"
 import BackButton from "../components/BackButton"
@@ -56,7 +57,7 @@ export default function StepTwo() {
                 <div className="bill-card-item selected-plan">
                     <div>
                         <h3>{planData.type} ({billingSelected})</h3>
-                        <button>change</button>
+                        <Link to='/2' className="change-plan-button">change</Link>
                     </div>
                     <p className="price">${planData.price}/{billingIndicator}</p>
                 </div>
