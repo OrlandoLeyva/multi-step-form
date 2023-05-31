@@ -6,7 +6,9 @@ import PlanCard from "../components/PlanCard"
 import BillingSwitcher from "../components/BillingSwitcher"
 
 // IMAGES
-import image from '../assets/images/icon-arcade.svg'
+import arcadeIcon from '../assets/images/icon-arcade.svg'
+import advancedIcon from '../assets/images/icon-advanced.svg'
+import proIcon from '../assets/images/icon-pro.svg'
 
 import { stepContextObj } from "../Context/StepContext"
 
@@ -36,7 +38,7 @@ export default function StepTwo() {
             <div className="plan-cards">
                 <PlanCard 
                     planData={{
-                        icon: {image},
+                        icon: arcadeIcon,
                         type: 'Arcade',
                         monthlyPrice: 9 ,
                         YearlyPrice: 90,
@@ -50,7 +52,7 @@ export default function StepTwo() {
 
                 <PlanCard 
                     planData={{
-                        icon: '/src/assets/images/icon-advanced.svg',
+                        icon: advancedIcon,
                         type: 'Advanced',
                         monthlyPrice: 12 ,
                         YearlyPrice: 120,
@@ -64,7 +66,7 @@ export default function StepTwo() {
 
                 <PlanCard 
                     planData={{
-                        icon: '/src/assets/images/icon-pro.svg',
+                        icon: proIcon,
                         type: 'Pro',
                         monthlyPrice: 15 ,
                         YearlyPrice: 150,

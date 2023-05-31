@@ -3,6 +3,8 @@ import { stepContextObj } from "../Context/StepContext"
 import StepHeader from "../components/StepHeader"
 import BackButton from "../components/BackButton"
 
+import thanksIcon from '../assets/images/icon-thank-you.svg'
+
 export default function StepTwo() {
     const [finished, setFinished] = useState(false)
     const {setStep, billingSelected} = useContext(stepContextObj)
@@ -34,7 +36,7 @@ export default function StepTwo() {
     return (
         <div className="step-page step-four">
             <div className="thanks-message">
-                <img src="/src/assets/images/icon-thank-you.svg" alt="" />
+                <img src={thanksIcon} alt="" />
                 <h2>Thank you!</h2>
                 <p>
                     Thanks for confirming your subscription! We hope you have fun 

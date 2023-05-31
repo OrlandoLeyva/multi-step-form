@@ -29,7 +29,6 @@ export default function AddOn(props){
 
     useEffect(()=>{
         if (isChecked) {
-            console.log('is ck');
             const selectedAddOns = JSON.parse(localStorage.getItem('selectedAddOns')) || []
             const newSelectedOns = selectedAddOns.filter(addOn => addOn.type !== cardData.type)
             localStorage.setItem('selectedAddOns', JSON.stringify([...newSelectedOns, {type: cardData.type, price: price}]))
