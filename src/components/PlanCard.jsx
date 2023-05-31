@@ -33,9 +33,11 @@ export default function PlanCard(props){
         }
     }, [price])
 
+    console.log(planData.icon);
+
     return (
         <div className="plan-card" onClick={selectPlan} ref={planCardRef}>
-            <img src={`${planData.icon}`} className="plan-icon"/>
+            <img src={`${planData.icon.image}`} className="plan-icon"/>
             <div className="plan-details">
                 <h2 className="plan-type">{planData.type}</h2>
                 {billingSelected == 'yearly' ? (
