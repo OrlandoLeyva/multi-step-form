@@ -29,7 +29,7 @@ body, html {
 
 body {
   min-height: 100vh;
-  background-color: var(--Light-gray);
+  background-color: var(--Magnolia);
   font-size: 1rem;
   font-weight: var(--fw-normal);
   color: var(--Cool-gray);
@@ -67,19 +67,33 @@ textarea {
   font: inherit;
 }
 
+.step-header {
+
+}
+
+.step-page-title {
+  font-size: 1.8rem;
+  color: var(--Marine-blue);
+  font-weight: var(--fw-bold);
+}
+
+.step-page-description {
+  line-height: 1.5rem;
+  margin-top: 10px;
+}
+
 /* SIDEBAR */
 
 .sidebar {
-  /* background-image: url('/src/assets/images/bg-sidebar-mobile.svg'); */
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-  /* background-position-x: center; */
-  background-color: blue;
-  height: 300px;
-  width: 100%;
+  background-image: url('/src/assets/images/bg-sidebar-mobile.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 220px;
+  /* width: 100%; */
   display: flex; 
   justify-content: center;
-  align-items: center;
+  padding-top: 2rem;
+  align-items: start;
   gap: 2rem
 }
 
@@ -110,8 +124,8 @@ textarea {
   width: 90%;
   margin-inline: auto;
   margin-top: -80px;
-  padding: 1rem;
-  border-radius: 5px;
+  padding: 2rem;
+  border-radius: 15px;
 }
 
 .navigation-buttons {
@@ -120,7 +134,7 @@ textarea {
   justify-content: space-between;
   position: absolute;
   bottom: 0;
-  padding: 1.5em;
+  padding: 1rem;
   background-color: var(--White);
   left: 0;
   right: 0;
@@ -155,11 +169,6 @@ textarea {
   color: var(--Cool-gray);
 }
 
-.step-page-title {
-  font-size: 1.25rem;
-  color: var(--Marine-blue);
-  font-weight: var(--fw-bold);
-}
 
 .step-one-form {
   margin-top: 30px;
