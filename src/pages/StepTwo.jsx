@@ -41,7 +41,7 @@ export default function StepTwo() {
 
     // remove
     useEffect(()=>{
-        console.log('selected plan', selectedPlan);
+        console.log('default plan', defaultRef);
     }, [selectedPlan])
 
     return (
