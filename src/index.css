@@ -25,12 +25,18 @@
 body, html {
   padding: 0;
   margin: 0;
-  min-width: 100vh;
 }
 
 body {
+  min-height: 100vh;
+  background-color: var(--Light-gray);
   font-size: 1rem;
   font-weight: var(--fw-normal);
+  color: var(--Cool-gray);
+}
+
+.block {
+  display: block;
 }
 
 a {
@@ -71,8 +77,7 @@ textarea {
   background-color: blue;
   height: 300px;
   width: 100%;
-  overflow: hidden;
-   display: flex; 
+  display: flex; 
   justify-content: center;
   align-items: center;
   gap: 2rem
@@ -100,7 +105,187 @@ textarea {
 
 /* FORMS */
 
+.step-page {
+  background-color: var(--White);
+  width: 90%;
+  margin-inline: auto;
+  margin-top: -80px;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.navigation-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  padding: 1.5em;
+  background-color: var(--White);
+  left: 0;
+  right: 0;
+}
+
+.step-one .navigation-buttons {
+  justify-content: end;
+}
+
+/* .step-four .navigation-buttons {
+  justify-content: start;
+} */
+
+.next-button,
+.back-button,
+.confirm-button {
+  font-size: 1.5rem;
+  font-weight: var(--fw-regular);
+  cursor: pointer;
+}
+
+.next-button,
+.confirm-button {
+  padding: 1rem 1.5rem;
+  background-color: var(--Marine-blue);
+  color: var(--White);
+  
+  border-radius: 5px;
+}
+
+.back-button {
+  color: var(--Cool-gray);
+}
+
 .step-page-title {
-  font-size: 1.125rem;
-  color: red;
+  font-size: 1.25rem;
+  color: var(--Marine-blue);
+  font-weight: var(--fw-bold);
+}
+
+.step-one-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.step-one-form input,
+.step-one-form input:focus {
+  border-radius: 5px;
+  border: 1px solid var(--Light-gray);
+  padding: .5rem;
+  width: 90%;
+}
+
+.step-one-form label {
+  color: var(--Marine-blue);
+}
+
+/* .step-page-description {
+  co
+} */
+
+/** PAGE TWO */
+
+.plan-cards {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.plan-card {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  border: 1px solid var(--Light-gray);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.plan-selected {
+  border: 1px solid var(--Marine-blue);
+}
+
+
+.plan-details > * {
+  padding: 5px;
+}
+
+.plan-offer,
+.plan-type {
+  color: var(--Marine-blue);
+}
+
+.billing-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.switcher-indicator {
+  display: flex;
+  background-color: var(--Marine-blue);
+  border-radius: 20px;
+  width: 40px;
+  height: 20px;
+  /* padding: 5px 1rem; */
+}
+
+.switcher-indicator.yearly-selected {justify-content: end;}
+.switcher-indicator.monthly-selected {justify-content: start;}
+
+.switcher-indicator span {
+  display: inline-block;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--White);
+}
+
+.select-billing-button {
+  border: none;
+  color: var(--Cool-gray);
+}
+
+.select-billing-button.selected {
+  color: var(--Marine-blue);
+}
+
+/* PAGE THREE */
+
+.addon-cards {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem
+}
+
+.add-on-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.add-on-card.checked {
+  border: 1px solid var(--Marine-blue);
+}
+
+
+/* PAGE FOUR */
+
+.bill-card {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bill-card-item:not(.selected-addOns) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.selected-addOn {
+  display: flex;
+  justify-content: space-between;
 }

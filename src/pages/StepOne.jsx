@@ -1,5 +1,8 @@
-import { useState } from "react"
+import { useState, useContext, useEffect } from "react"
 import StepHeader from "../components/StepHeader"
+import NextButton from "../components/NextButton"
+import { stepContextObj } from "../Context/StepContext"
+
 
 export default function StepOne(){
     const [formData, setFormData] = useState({
@@ -7,6 +10,12 @@ export default function StepOne(){
         email: '',
         phone: 0 
     })
+
+    const {setStep} = useContext(stepContextObj)
+    useEffect(()=>{
+        setStep(1)
+    }, [])
+
     function handleChange(e) {
         const {value, name} = e.target
 
@@ -22,31 +31,46 @@ export default function StepOne(){
         <div className="step-page step-one">
             <StepHeader title='Personal info' description='Please provide your name, email, address and phone number'/>
             {/* FORM */}
-            <form>
-                <label htmlFor="name">Name</label>
-                <input 
-                    onChange={handleChange}
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    type="text" />
+            <form className="step-one-form">
+                <label htmlFor="name">
+                    <span className="block">Name</span>
+                    <input 
+                        onChange={handleChange}
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        type="text" />
+                </label>
+                
 
-                <label htmlFor="name">Email address</label>
-                <input 
-                    onChange={handleChange}
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    type="email" />
+                <label htmlFor="name">
+                    <span className="block">Email address</span>
+                    <input 
+                        onChange={handleChange}
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        type="email" />
+                </label>
+                
 
-                <label htmlFor="name">Phone Number</label>
-                <input 
-                    onChange={handleChange}
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    type="text" />
+                <label htmlFor="name">
+                    <span className="block">Phone Number</span>
+                    <input 
+                        onChange={handleChange}
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        type="text" />
+                </label>
+                
             </form>
+
+            <div className="navigation-buttons">
+                <NextButton/>
+            </div>
         </div>
     )
 }
+
+// BillingSwitcher
