@@ -22,10 +22,10 @@ export default function StepTwo() {
     }, [])
     
     function select(ref){
-        console.log('selecting new plan', ref.current);
+        // console.log('selecting new plan', ref.current);
         setSelectedPlan(prevSelected =>{
             if (selectedPlan) {
-                console.log('prev selected true', prevSelected);
+                // console.log('prev selected true', prevSelected);
                 prevSelected.classList.remove('plan-selected')
             }
             ref.current.classList.add('plan-selected')
@@ -35,7 +35,7 @@ export default function StepTwo() {
 
     // remove
     useEffect(()=>{
-        console.log('selected plan', selectedPlan);
+        // console.log('selected plan', selectedPlan);
     })
 
     return (
