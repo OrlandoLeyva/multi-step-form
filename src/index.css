@@ -132,7 +132,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   padding: 1rem;
   background-color: var(--White);
