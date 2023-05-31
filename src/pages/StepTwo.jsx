@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import BackButton from "../components/BackButton"
 import NextButton from "../components/NextButton"
 import StepHeader from "../components/StepHeader"
@@ -17,6 +17,8 @@ export default function StepTwo() {
     // const [billingSelected, setBillingSelected] = useState('yearly')
     const [selectedPlan, setSelectedPlan] = useState(null)
 
+    let defaultRef = null
+
     useEffect(()=>{
         setStep(2)
     }, [])
@@ -31,6 +33,8 @@ export default function StepTwo() {
             console.log('ready to be selected', ref.current);
             ref.current.classList.add('plan-selected')
             console.log('class added', ref.current);
+            defaultRef = ref.current
+            console.log('default ref', defaultRef);
             setSelectedPlan(ref.current)
         })
     }
@@ -38,7 +42,7 @@ export default function StepTwo() {
     // remove
     useEffect(()=>{
         console.log('selected plan', selectedPlan);
-    })
+    }, [selectedPlan])
 
     return (
         <div className="step-page">
@@ -57,6 +61,7 @@ export default function StepTwo() {
                     select={select}
                     billingSelected={billingSelected}
                     default={true}
+                    ref={defaultRef}
                     />
 
                 <PlanCard 
