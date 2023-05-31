@@ -350,3 +350,21 @@ textarea {
   font: inherit;
   color: inherit;
 }
+
+.thanks-page {
+  text-align: center;
+}
+
+.thanks-message > * {
+  padding: 10px;
+}
+
+.thanks-message p {
+  line-height: 1.5rem;;
+}
+
+.thanks-page h2 {
+  font-size: 1.8rem;
+  color: var(--Marine-blue);
+  font-weight: var(--fw-bold);
+} 

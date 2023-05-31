@@ -35,7 +35,7 @@ export default function StepTwo() {
     
     if (finished)
     return (
-        <div className="step-page step-four">
+        <div className="step-page thanks-page">
             <div className="thanks-message">
                 <img src={thanksIcon} alt="" />
                 <h2>Thank you!</h2>
