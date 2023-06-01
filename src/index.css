@@ -151,14 +151,14 @@ textarea {
 .next-button,
 .back-button,
 .confirm-button {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: var(--fw-regular);
   cursor: pointer;
 }
 
 .next-button,
 .confirm-button {
-  padding: 1rem 1.5rem;
+  padding: .5rem 1.5rem;
   background-color: var(--Marine-blue);
   color: var(--White);
   
@@ -275,6 +275,7 @@ textarea {
   justify-content: flex-start;
   gap: 1rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .add-on-card.checked {
@@ -368,3 +369,111 @@ textarea {
   color: var(--Marine-blue);
   font-weight: var(--fw-bold);
 } 
+
+.error-message {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  color: var(--Marine-blue);
+  padding-inline: 1rem;
+}
+
+.back-home {
+  text-decoration: underline;
+  color: var(--Purplish-blue);
+  /* color: ; */
+}
+
+/* DESKTOP DESIGN */
+
+@media(min-width: 850px) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+  #root {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .site-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: var(--White);
+    padding: 1rem;
+    border-radius: 8;
+    height: 80%;
+    width: 90%;
+    max-width: 875px;
+    margin: auto;
+  }
+
+  .step-page {
+    margin-top: unset;
+    width: unset;
+    /* THIS WAY I CAN PUSH THE BUTTONS TO THE BOTTOM */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    /* background-image: url('./assets/images/bg-sidebar-desktop.svg'); */
+    background-position-y: top;
+    height: unset;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-inline: 1rem;
+  }
+
+  .step-indicator {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .sidebar-info {
+    display: unset;
+  }
+
+  .sidebar-info h3 {
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+    color: var(--Cool-gray);
+  }
+
+  .sidebar-info h2 {
+    font-size: 1.125rem;
+    color: var(--White);
+    font-family: var(--fw-bold);
+  }
+
+  .navigation-buttons {
+    position: static;
+    margin-top: auto;
+  }
+
+  .plan-cards {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .plan-card {
+    flex-direction: column;
+    flex-grow: 1;
+    cursor: pointer;
+    height: 170px;
+  }
+
+  .plan-offer {
+    font-size: .875rem;
+  }
+
+  .plan-card:hover {
+    transition: 200ms;
+    border: 1px solid var(--Marine-blue);
+  }
+}

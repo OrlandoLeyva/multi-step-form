@@ -32,6 +32,11 @@ export default function StepTwo() {
             </div>
         )
     })
+
+    function finishForm() {
+        localStorage.clear()
+        setFinished(true)
+    }
     
     if (finished)
     return (
@@ -74,7 +79,7 @@ export default function StepTwo() {
 
             <div className="navigation-buttons">
                 <BackButton />
-                <button className="confirm-button" onClick={()=>{setFinished(true)}}>Confirm</button>
+                <button className="confirm-button" onClick={finishForm}>Confirm</button>
             </div>
         </div>
     )
