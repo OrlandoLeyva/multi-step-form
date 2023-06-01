@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from "react"
+import { useNavigate } from "react-router"
 import StepHeader from "../components/StepHeader"
-import NextButton from "../components/NextButton"
+// import NextButton from "../components/NextButton"
 import { stepContextObj } from "../Context/StepContext"
 
 
@@ -8,8 +9,9 @@ export default function StepOne(){
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        phone: 0 
+        phone: '' 
     })
+    const [showErrorMessage, setShowErrorMessage] = useState(false)
 
     const {setStep} = useContext(stepContextObj)
     useEffect(()=>{
@@ -27,11 +29,27 @@ export default function StepOne(){
         })
     }
 
+    const navigate = useNavigate()
+
+    function validateForm(){
+
+        for (const value of Object.values(formData)){
+            console.log(typeof value);
+            if (value.trim() == '') { 
+                setShowErrorMessage(true)
+                return false;
+            }
+        }
+        localStorage.setItem('validForm', JSON.stringify(true))
+        navigate('/2')
+    }
+
     return (
         <div className="step-page step-one">
             <StepHeader title='Personal info' description='Please provide your name, email, address and phone number'/>
             {/* FORM */}
             <form className="step-one-form">
+                {showErrorMessage && <p className="form-error-message">Please, fill out all the inputs</p>}
                 <label htmlFor="name">
                     <span className="block">Name</span>
                     <input 
@@ -43,7 +61,7 @@ export default function StepOne(){
                 </label>
                 
 
-                <label htmlFor="name">
+                <label htmlFor="email">
                     <span className="block">Email address</span>
                     <input 
                         onChange={handleChange}
@@ -54,7 +72,7 @@ export default function StepOne(){
                 </label>
                 
 
-                <label htmlFor="name">
+                <label htmlFor="phone">
                     <span className="block">Phone Number</span>
                     <input 
                         onChange={handleChange}
@@ -67,7 +85,8 @@ export default function StepOne(){
             </form>
 
             <div className="navigation-buttons">
-                <NextButton/>
+                <button className="next-button" onClick={validateForm}>Next step</button>
+                {/* <NextButton/> */}
             </div>
         </div>
     )

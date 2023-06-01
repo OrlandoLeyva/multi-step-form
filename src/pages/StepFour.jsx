@@ -10,11 +10,13 @@ export default function StepTwo() {
     const [finished, setFinished] = useState(false)
     const {setStep, billingSelected} = useContext(stepContextObj)
     const [planData] = useState(()=>{return JSON.parse(localStorage.getItem('planData'))})
-    const [selectedAddOns] = useState(()=>{return JSON.parse(localStorage.getItem('selectedAddOns'))})
+    const [selectedAddOns] = useState(()=>{return JSON.parse(localStorage.getItem('selectedAddOns')) || []})
 
     const billingIndicator = billingSelected == 'yearly' ? 'yr' : 'mo'
     const totalMessage = isYearly() ? 'Year' : 'Month'
-    const total = planData.price + selectedAddOns.reduce((total, item) => total + item.price , 0)
+    const total = 
+        selectedAddOns.length > 0 ? planData.price + selectedAddOns.reduce((total, item) => total + item.price , 0) 
+                                    : planData.price
 
     useEffect(()=>{
         setStep(4)
@@ -34,6 +36,7 @@ export default function StepTwo() {
     })
 
     function finishForm() {
+        // console.log(JSON.parse(localStorage.getItem('validForm'))); 
         localStorage.clear()
         setFinished(true)
     }

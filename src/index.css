@@ -385,6 +385,10 @@ textarea {
   /* color: ; */
 }
 
+.form-error-message {
+  color: var(--Strawberry-red);
+}
+
 /* DESKTOP DESIGN */
 
 @media(min-width: 850px) {
